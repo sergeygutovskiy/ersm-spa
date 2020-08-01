@@ -2,6 +2,9 @@
 	/*padding-bottom: 32px;*/
 	position: relative;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .header_background-color {
@@ -90,14 +93,14 @@
 }
 
 .header__title-container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: center;*/
 }
 
 .header__title {
@@ -128,10 +131,12 @@
 	display: flex;
 	justify-content: center;
 
+	margin-bottom: 32px;
+
 	/*margin-top: 152px;*/
-	position: absolute;
-	bottom: 32px;
-	left: calc(50% - 282px / 2);
+	/*position: absolute;*/
+	/*bottom: 32px;*/
+	/*left: calc(50% - 282px / 2);*/
 }
 
 .header__sliders span {
