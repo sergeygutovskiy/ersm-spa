@@ -2,3 +2,11 @@
 	margin-left:  83px;
 	margin-right: 83px;
 }
+
+@media screen and (max-width: 768px)
+{
+	.main-container {
+		margin-left:  16px;
+		margin-right: 16px;
+	}
+}
