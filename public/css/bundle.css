@@ -1,0 +1,6 @@
+/* for all pages */
+@import "_general.css";
+@import "_main.css";
+
+/* for templates */
+@import "_header.css";

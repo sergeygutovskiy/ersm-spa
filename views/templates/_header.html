@@ -1,0 +1,94 @@
+<header class="header">
+	<div class="header_background-color"></div>
+
+	<div class="swiper-container header-background">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide header-background__item">
+				<img src="img/home-header__background-1.jpg">
+			</div>
+			<div class="swiper-slide header-background__item">
+				<img src="img/home-header__background-2.jpg">
+			</div>
+			<div class="swiper-slide header-background__item">
+				<img src="img/home-header__background-3.jpg">
+			</div>
+			<div class="swiper-slide header-background__item">
+				<img src="img/home-header__background-4.jpg">
+			</div>
+			<div class="swiper-slide header-background__item">
+				<img src="img/home-header__background-5.jpg">
+			</div>
+		</div>
+	</div>
+
+	<nav class="navigation">
+		<div></div>
+		<ul class="navigation__list">
+			<li class="navigation__list-item"><a href="/">Услуги</a></li>
+			<li class="navigation__list-item"><a href="/">Работы</a></li>
+			<li class="navigation__list-item"><a href="/">О нас</a></li>
+			<li class="navigation__list-item"><a href="/">Стоимость</a></li>
+			<li class="navigation__list-item"><a href="/">Контакты</a></li>
+		</ul>
+	</nav>
+
+	<section class="header__info main-container">
+		<div class="header__info-item" data-icon="">
+			<i class="fal fa-clock"></i>
+			Работаем ежедневно
+			<br>
+			<time>
+				с 9:00 до 21:00
+			</time>
+		</div>
+		<div class="header__info-item">
+			<i class="fas fa-car"></i>
+			Бесплатный выезд мастера
+		</div>
+		<div class="header__info-item">
+			<i class="fas fa-comments"></i>
+			Бесплатная консультация
+			<br>
+			инженера
+		</div>
+		<div class="header__info-item">
+			<i class="fas fa-phone-alt"></i>
+			Нужен ремонт? Звоните!
+			<br>
+			<a href="">
+				+7 (962) 684 76 15
+			</a>
+		</div>
+	</section>
+
+	<section class="main-container">
+		<span class="header__title">
+			Ремонт парадных в Москве 
+			<br>
+			и Санкт-Петербурге
+		</span>		
+		<button class="header__button">Заказать консультацию</button>
+	</section>
+
+	<div class="header__sliders">
+		
+	</div>
+
+</header>
+
+<script>
+	var headerSwiper = new Swiper('.swiper-container', {
+		loop: true,
+		speed: 1000,
+		
+		pagination: {
+			el: '.header__sliders',
+		},
+
+		autoplay: {
+			delay: 2500,
+		},
+	});
+</script>

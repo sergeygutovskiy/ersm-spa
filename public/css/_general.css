@@ -1,0 +1,61 @@
+@font-face {
+	font-family: Rubik;
+	src: url(../fonts/rubik/Rubik-Light.ttf);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Rubik;
+	src: url(../fonts/rubik/Rubik-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Rubik;
+	src: url(../fonts/rubik/Rubik-Medium.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Rubik;
+	src: url(../fonts/rubik/Rubik-Bold.ttf);
+	font-weight: 700;
+}
+
+body {
+	margin: 0;
+	
+	font-size: 18px;
+	font-family: "Rubik", sans-serif;
+	font-weight: 300;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+* { 
+	box-sizing: border-box; 
+}
+
+*, *:focus { outline: none; }
+
+a { 
+	text-decoration: none; color: inherit; 
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button, 
+input, 
+input::placeholder, 
+textarea {
+	font-family: "Rubik", sans-serif;
+	border: 0;
+}		
