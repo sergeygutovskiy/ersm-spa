@@ -252,6 +252,7 @@
 		width: auto;
 		display: flex;
 		align-items: center;
+		max-height: 36px;
 	}
 
 	.navigation__hamburger .line {
