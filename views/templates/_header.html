@@ -1,82 +1,92 @@
 <header class="header">
-	<div class="header_background-shadow"></div>
-	<div class="header_background-color"></div>
-	<div class="swiper-container header-background">
+
+	<div class="header-background"></div>
+
+	<nav class="navigation">
+		<section class="navigation__left-container">
+			<img src="img/header__logo.png" class="navigation__logo">
+			
+			<div class="navigation__hamburger-container">
+				<div class="navigation__hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+			</div>
+		</section>
+
+		<section class="navigation__right-container">
+			<ul class="navigation__list">
+				<li class="navigation__item"> <a href="/">Услуги</a> </li>
+				<li class="navigation__item"> <a href="/">Работы</a> </li>
+				<li class="navigation__item"> <a href="/">О нас</a> </li>
+				<li class="navigation__item"> <a href="/">Стоимость</a> </li>
+				<li class="navigation__item"> <a href="/">Контакты</a> </li>
+			</ul>
+		</section>
+	</nav>
+
+	<section class="header-info main-container">
+		<div class="header-info__item">
+			<i class="fal fa-clock"></i>
+			Работаем ежедневно
+			<br>
+			<time>
+				с 9:00 до 21:00
+			</time>
+		</div>
+		<div class="header-info__item">
+			<i class="fas fa-car"></i>
+			Бесплатный выезд мастера
+		</div>
+		<div class="header-info__item">
+			<i class="fas fa-comments"></i>
+			Бесплатная консультация
+			<br>
+			инженера
+		</div>
+		<div class="header-info__item">
+			<i class="fas fa-phone-alt"></i>
+			Нужен ремонт? Звоните!
+			<br>
+			<a href="">
+				+7 (962) 684 76 15
+			</a>
+		</div>
+	</section>
+
+	<section class="swiper-container header__slider">
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 			<!-- Slides -->
-			<div class="swiper-slide header-background__item">
+			<div class="swiper-slide header__slide">
 				<img src="img/home-header__background-1.jpg">
 			</div>
-			<div class="swiper-slide header-background__item">
+			<div class="swiper-slide header__slide">
 				<img src="img/home-header__background-2.jpg">
 			</div>
-			<div class="swiper-slide header-background__item">
+			<div class="swiper-slide header__slide">
 				<img src="img/home-header__background-3.jpg">
 			</div>
-			<div class="swiper-slide header-background__item">
+			<div class="swiper-slide header__slide">
 				<img src="img/home-header__background-4.jpg">
 			</div>
-			<div class="swiper-slide header-background__item">
+			<div class="swiper-slide header__slide">
 				<img src="img/home-header__background-5.jpg">
 			</div>
 		</div>
-	</div>
-
-	<section>
-		<nav class="navigation">
-			<div></div>
-			<ul class="navigation__list">
-				<li class="navigation__list-item"><a href="/">Услуги</a></li>
-				<li class="navigation__list-item"><a href="/">Работы</a></li>
-				<li class="navigation__list-item"><a href="/">О нас</a></li>
-				<li class="navigation__list-item"><a href="/">Стоимость</a></li>
-				<li class="navigation__list-item"><a href="/">Контакты</a></li>
-			</ul>
-		</nav>
-
-		<section class="header__info main-container">
-			<div class="header__info-item" data-icon="">
-				<i class="fal fa-clock"></i>
-				Работаем ежедневно
-				<br>
-				<time>
-					с 9:00 до 21:00
-				</time>
-			</div>
-			<div class="header__info-item">
-				<i class="fas fa-car"></i>
-				Бесплатный выезд мастера
-			</div>
-			<div class="header__info-item">
-				<i class="fas fa-comments"></i>
-				Бесплатная консультация
-				<br>
-				инженера
-			</div>
-			<div class="header__info-item">
-				<i class="fas fa-phone-alt"></i>
-				Нужен ремонт? Звоните!
-				<br>
-				<a href="">
-					+7 (962) 684 76 15
-				</a>
-			</div>
-		</section>		
 	</section>
 
-	<section class="header__title-container main-container">
-		<span class="header__title">
-			Ремонт парадных в Москве 
-			<br>
-			и Санкт-Петербурге
-		</span>	
-		<div>			
+	<section class="main-container">
+		<div class="header__title">
+			Ремонт парадных в Москве <br> и Санкт-Петербурге
+		</div>
+		<div class="header__button-container">
 			<button class="header__button">Заказать консультацию</button>
-		</div>	
+		</div>
 	</section>
 
-	<div class="header__sliders"></div>
+	<section class="header__slider-pagination"></section>
 
 </header>
 
@@ -86,11 +96,44 @@
 		speed: 1000,
 		
 		pagination: {
-			el: '.header__sliders',
+			el: '.header__slider-pagination',
 		},
 
 		autoplay: {
 			delay: 2500,
 		},
+	});
+
+
+	var isNavigationActive = false;
+	var navigationList     = document.getElementsByClassName("navigation__right-container")[0];
+	var navigationButton   = document.getElementsByClassName("navigation__hamburger")[0];
+
+	var toogleNavigation = function () {
+		console.log(isNavigationActive);
+
+		if (isNavigationActive) 
+		{
+			navigationButton.classList.remove("is-active");
+
+			navigationList.classList.remove("navigation__right-container--active")
+			isNavigationActive = false;
+		}
+		else
+		{
+			navigationButton.classList.add("is-active");
+
+			navigationList.classList.add("navigation__right-container--active")
+			isNavigationActive = true;
+		}
+	}
+
+	navigationButton.onclick = toogleNavigation;	
+
+	// We listen to the resize event
+	window.addEventListener('resize', () => {
+		// We execute the same script as before
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 </script>

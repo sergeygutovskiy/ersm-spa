@@ -26,7 +26,6 @@ app.all("/", function (req, res, next) {
 	next();
 });
 
-
 app.get("*", (req, res) => {
 	res.render("index", {
 		pageFileName: req.body.pageFileName
