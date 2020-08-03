@@ -272,6 +272,7 @@
 	.navigation__hamburger {
 		position: relative;
 		transition: all 0.3s ease-in-out;
+		max-height: 36px;
 	}
 
 	.navigation__hamburger.is-active {
