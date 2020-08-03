@@ -26,6 +26,8 @@
 		</section>
 	</nav>
 
+	<div class="header-shadow"></div>
+
 	<section class="header-info main-container">
 		<div class="header-info__item">
 			<i class="fal fa-clock"></i>
@@ -99,9 +101,16 @@
 			el: '.header__slider-pagination',
 		},
 
-		autoplay: {
-			delay: 2500,
-		},
+		autoplay: { delay: 2500 },
+
+		breakpoints: {
+			0: {
+				autoplay: false
+			},
+			426: {
+				autoplay: { delay: 2500 }
+			}
+		}
 	});
 
 

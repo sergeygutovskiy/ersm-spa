@@ -14,6 +14,16 @@
 	z-index: -1;	
 }
 
+.header-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 15vh;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+	z-index: -1;
+}
+
 .navigation {
 	display: flex;
 	justify-content: space-between;
@@ -21,6 +31,7 @@
 
 	margin-left: 83px;
 	margin-right: 83px;
+	z-index: 1;
 }
 
 .navigation__left-container {
@@ -44,7 +55,7 @@
 }
 
 .navigation__item:not(:last-child) {
-	margin-right: 32px;
+	margin-right: 52px;
 }
 
 .header-info {
@@ -218,6 +229,11 @@
 {
 	.header {
 		height: calc(var(--vh, 1vh) * 100);
+	}
+
+	.header-shadow {
+		top: auto;
+		z-index: 1;
 	}
 
 	.header__title {
