@@ -4,3 +4,6 @@
 
 /* for templates */
 @import "_header.css";
+
+/* for pages */
+@import "home.css";
